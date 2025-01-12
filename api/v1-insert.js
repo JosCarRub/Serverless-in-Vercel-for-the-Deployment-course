@@ -2,7 +2,7 @@ import { createClient } from '@supabase/supabase-js';
 
 export default async function handler(req, res) {
     
-    const { name, email } = req.body;
+    const { nombre, email } = req.body;
 
     // Crear el cliente de Supabase
     const supabase = createClient(
@@ -13,7 +13,7 @@ export default async function handler(req, res) {
    
     const { data, error } = await supabase
         .from('nombre') 
-        .insert([{ name, email }]);
+        .insert([{ nombre, email }]);
 
     if (error) {
         console.error('Error:', error);
