@@ -1,11 +1,11 @@
 document.getElementById('formulario-div').addEventListener('submit', async (event) => {
-    event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+    event.preventDefault(); 
     
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
 
     // Enviar los datos al backend
-    const response = await fetch('/api/insert-data', {
+    const response = await fetch('/api/v1-insert', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

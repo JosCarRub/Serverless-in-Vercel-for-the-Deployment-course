@@ -12,7 +12,7 @@ export default async function handler(req, res) {
 
    
     const { data, error } = await supabase
-        .from('nombre') // Asegúrate de tener la tabla 'users' en Supabase
+        .from('nombre') 
         .insert([{ name, email }]);
 
     if (error) {
