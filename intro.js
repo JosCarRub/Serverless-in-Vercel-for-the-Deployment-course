@@ -1,7 +1,7 @@
 document.getElementById('formulario-div').addEventListener('submit', async (event) => {
     event.preventDefault(); 
     
-    const name = document.getElementById('name').value;
+    const name = document.getElementById('nombre').value;
     const email = document.getElementById('email').value;
 
     // Enviar los datos al backend
@@ -10,7 +10,7 @@ document.getElementById('formulario-div').addEventListener('submit', async (even
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ name, email }),
+        body: JSON.stringify({ nombre, email }),
     });
 
     const result = await response.json();

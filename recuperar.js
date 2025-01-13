@@ -13,7 +13,7 @@ document.getElementById('loadDataButton').addEventListener('click', async () => 
             
             data.data.forEach(item => {
                 const p = document.createElement('p');
-                p.textContent = `Nombre: ${item.name}, Correo: ${item.email}`;
+                p.textContent = `Nombre: ${item.nombre}, Correo: ${item.email}`;
                 container.appendChild(p);
             });
         } else {
