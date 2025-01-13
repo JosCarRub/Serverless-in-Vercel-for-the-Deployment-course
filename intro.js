@@ -1,7 +1,7 @@
 document.getElementById('formulario-div').addEventListener('submit', async (event) => {
     event.preventDefault(); 
     
-    const name = document.getElementById('nombre').value;
+    const nombre = document.getElementById('nombre').value;
     const email = document.getElementById('email').value;
 
     // Enviar los datos al backend
